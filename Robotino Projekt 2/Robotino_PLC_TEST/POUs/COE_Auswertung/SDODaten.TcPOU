@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <POU Name="SDODaten" Id="{4be8eb0e-eb8a-4a8c-aa30-ca78f43e7d4b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SDODaten
+VAR
+	DatenMotor1: SDODatenMotor1;
+	DatenMotor2: SDODatenMotor2;
+	DatenMotor3: SDODatenMotor3;
+	DatenMotorklemme1: SDODatenMotorklemme1;
+	DatenMotorklemme2: SDODatenMotorklemme2;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[DatenMotor1();
+DatenMotor2();
+DatenMotor3();
+DatenMotorklemme1();
+DatenMotorklemme2();]]></ST>
+    </Implementation>
+    <LineIds Name="SDODaten">
+      <LineId Id="14" Count="1" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
