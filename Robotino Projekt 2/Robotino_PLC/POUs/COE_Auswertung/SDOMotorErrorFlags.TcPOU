@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="SDOMotorErrorFlags" Id="{009dd3da-fe0c-4125-961f-937488e6d44b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SDOMotorErrorFlags
+VAR
+	ErrorFlagsKlemme1: getSDOMotorErrorFlags;
+	ErrorFlagsKlemme2: getSDOMotorErrorFlags;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[ErrorFlagsKlemme1.nSlaveAddr := 1002;
+ErrorFlagsKlemme1();]]></ST>
+    </Implementation>
+    <LineIds Name="SDOMotorErrorFlags">
+      <LineId Id="5" Count="0" />
+      <LineId Id="10" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

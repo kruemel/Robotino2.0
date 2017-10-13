@@ -5,7 +5,7 @@
     <CycleTime>400</CycleTime>
     <Priority>1</Priority>
     <PouCall>
-      <Name>SDODaten</Name>
+      <Name>SDODatenMotor</Name>
     </PouCall>
     <PouCall>
       <Name>Motoransteuerung</Name>

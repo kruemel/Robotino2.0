@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="SDODatenMotor" Id="{38769b05-daee-4b94-978b-eba83957c752}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SDODatenMotor
+VAR
+	DatenMotor1: getSDODatenMotor;
+	DatenMotor2: getSDODatenMotor;
+	DatenMotor3: getSDODatenMotor;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+DatenMotor1.nSlaveAddr := 1002; 	// Klemme 2
+DatenMotor1.nIndex := 16#9020;		// Channel 1
+DatenMotor1();
+
+DatenMotor2.nSlaveAddr := 1001;		// Klemme 1
+DatenMotor2.nIndex := 16#9030;		// Channel 2
+DatenMotor2();
+
+DatenMotor3.nSlaveAddr := 1001;		// Klemme 1
+DatenMotor3.nIndex := 16#9020;		// Channel 1
+DatenMotor3();]]></ST>
+    </Implementation>
+    <LineIds Name="SDODatenMotor">
+      <LineId Id="31" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="43" Count="1" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="18" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

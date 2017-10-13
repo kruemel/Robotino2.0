@@ -21,22 +21,19 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\COE_Auswertung\SDODaten.TcPOU">
+    <Compile Include="POUs\COE_Auswertung\SDODatenMotor.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\COE_Auswertung\SDODatenMotor1.TcPOU">
+    <Compile Include="POUs\COE_Auswertung\getSDODatenMotor.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\COE_Auswertung\SDODatenMotor2.TcPOU">
+    <Compile Include="POUs\COE_Auswertung\getSDOMotorErrorFlags.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\COE_Auswertung\SDODatenMotor3.TcPOU">
+    <Compile Include="POUs\COE_Auswertung\getSDODatenMotorklemme.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\COE_Auswertung\SDODatenMotorklemme1.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\COE_Auswertung\SDODatenMotorklemme2.TcPOU">
+    <Compile Include="POUs\COE_Auswertung\SDOMotorErrorFlags.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Motoransteuerung\Motoransteuerung.TcPOU">

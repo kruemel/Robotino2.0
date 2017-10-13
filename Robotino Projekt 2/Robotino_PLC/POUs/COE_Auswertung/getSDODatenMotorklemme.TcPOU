@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
-  <POU Name="SDODatenMotorklemme1" Id="{c1c709cf-9e68-4855-a449-f67fc8745e20}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SDODatenMotorklemme1
+  <POU Name="getSDODatenMotorklemme" Id="{c1c709cf-9e68-4855-a449-f67fc8745e20}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK getSDODatenMotorklemme
 VAR_INPUT
+	nSlaveAddr: UINT;
 END_VAR
 VAR_OUTPUT
 	
@@ -69,7 +70,7 @@ END_VAR
                           <n />
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"TIME"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -141,7 +142,7 @@ END_VAR
                                 <n />
                                 <o>
                                   <v n="Operand">""</v>
-                                  <v n="Type">"TIME"</v>
+                                  <n n="Type" />
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
                                   <v n="Address">""</v>
@@ -329,7 +330,7 @@ END_VAR
                           <n />
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"BOOL"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -345,7 +346,7 @@ END_VAR
                           </o>
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"UDINT"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -389,8 +390,8 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
-                            <v n="Type">"INT"</v>
+                            <v n="Operand">"nSlaveAddr"</v>
+                            <v n="Type">"UINT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -477,7 +478,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Internaltemperature"</v>
-                                <v n="Type">"BYTE"</v>
+                                <v n="Type">"SINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -547,7 +548,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Internaltemperature"</v>
-                                <v n="Type">"BYTE"</v>
+                                <v n="Type">"SINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -702,7 +703,7 @@ END_VAR
                           <n />
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"BOOL"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -718,7 +719,7 @@ END_VAR
                           </o>
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"UDINT"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -762,8 +763,8 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
-                            <v n="Type">"INT"</v>
+                            <v n="Operand">"nSlaveAddr"</v>
+                            <v n="Type">"UINT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -850,7 +851,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Steuerspannung"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -920,7 +921,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Steuerspannung"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -1075,7 +1076,7 @@ END_VAR
                           <n />
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"BOOL"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1091,7 +1092,7 @@ END_VAR
                           </o>
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"UDINT"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1135,8 +1136,8 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
-                            <v n="Type">"INT"</v>
+                            <v n="Operand">"nSlaveAddr"</v>
+                            <v n="Type">"UINT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1223,7 +1224,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Lastspannung"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -1293,7 +1294,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Lastspannung"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -1448,7 +1449,7 @@ END_VAR
                           <n />
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"BOOL"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1464,7 +1465,7 @@ END_VAR
                           </o>
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"UDINT"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1508,8 +1509,8 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
-                            <v n="Type">"INT"</v>
+                            <v n="Operand">"nSlaveAddr"</v>
+                            <v n="Type">"UINT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1596,7 +1597,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Zykluszeit"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -1666,7 +1667,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1Zykluszeit"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -1821,7 +1822,7 @@ END_VAR
                           <n />
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"BOOL"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1837,7 +1838,7 @@ END_VAR
                           </o>
                           <o>
                             <v n="Operand">""</v>
-                            <v n="Type">"UDINT"</v>
+                            <n n="Type" />
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1881,8 +1882,8 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
-                            <v n="Type">"INT"</v>
+                            <v n="Operand">"nSlaveAddr"</v>
+                            <v n="Type">"UINT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1969,7 +1970,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1PWMFrequency"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -2039,7 +2040,7 @@ END_VAR
                             <o>
                               <o n="Operand" t="Operand">
                                 <v n="Operand">"Motorklemme1PWMFrequency"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
