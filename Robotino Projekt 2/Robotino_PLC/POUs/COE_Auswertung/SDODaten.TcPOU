@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
-  <POU Name="SDODaten" Id="{4be8eb0e-eb8a-4a8c-aa30-ca78f43e7d4b}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="SDODaten" Id="{38769b05-daee-4b94-978b-eba83957c752}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM SDODaten
 VAR
 	DatenMotor1: SDODatenMotor1;

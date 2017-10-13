@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
-  <POU Name="SDODatenMotorklemme1" Id="{9f92255c-44a3-4130-a06c-2de7fbf9e0fd}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SDODatenMotorklemme1
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="SDODatenMotorklemme2" Id="{f7c14adf-55aa-433d-a7b5-08498b43446e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK SDODatenMotorklemme2
 VAR_INPUT
 END_VAR
 VAR_OUTPUT
@@ -389,7 +389,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
+                            <v n="Operand">"1002"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -762,7 +762,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
+                            <v n="Operand">"1002"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1135,7 +1135,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
+                            <v n="Operand">"1002"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1508,7 +1508,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
+                            <v n="Operand">"1002"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1881,7 +1881,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1001"</v>
+                            <v n="Operand">"1002"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>

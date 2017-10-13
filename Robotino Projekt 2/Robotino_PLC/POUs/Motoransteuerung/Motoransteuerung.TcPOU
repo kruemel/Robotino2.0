@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
-  <POU Name="MAIN_Motoransteuerung" Id="{16a347dc-587d-4819-9a09-e734dabd6320}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM MAIN_Motoransteuerung
+  <POU Name="Motoransteuerung" Id="{26a2aa4e-afb1-47b4-a75b-3f81a7f1ad40}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Motoransteuerung
 VAR	
 	//Zustandsautomat
 	state:		EnumState:=EnumState.init;
@@ -148,7 +148,7 @@ CASE state OF
 END_CASE
 state:=nextState;]]></ST>
     </Implementation>
-    <LineIds Name="MAIN_Motoransteuerung">
+    <LineIds Name="Motoransteuerung">
       <LineId Id="724" Count="0" />
       <LineId Id="643" Count="4" />
       <LineId Id="649" Count="2" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
-  <POU Name="MAIN_Motormesswerte" Id="{98ef246c-4a5c-421c-b909-7664c31975fe}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM MAIN_Motormesswerte
+  <POU Name="Motormesswerte" Id="{bfdecdb6-85cd-45e5-8fd3-068aaa1edc04}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Motormesswerte
 VAR
 bStart: BOOL := FALSE;	
 
@@ -105,7 +105,7 @@ encDataOldMotor1:=encDataFromMotor1;
 encDataOldMotor2:=encDataFromMotor2;
 encDataOldMotor3:=encDataFromMotor3;]]></ST>
     </Implementation>
-    <LineIds Name="MAIN_Motormesswerte">
+    <LineIds Name="Motormesswerte">
       <LineId Id="128" Count="0" />
       <LineId Id="132" Count="0" />
       <LineId Id="134" Count="2" />

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <Task Name="PlcTask" Id="{156ae709-7b98-4257-9c02-5355d4c5a1c0}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>400</CycleTime>
+    <Priority>1</Priority>
+    <PouCall>
+      <Name>SDODaten</Name>
+    </PouCall>
+    <PouCall>
+      <Name>Motoransteuerung</Name>
+    </PouCall>
+    <PouCall>
+      <Name>Motormesswerte</Name>
+    </PouCall>
+    <PouCall>
+      <Name>Shutdown</Name>
+    </PouCall>
+    <PouCall>
+      <Name>UDP</Name>
+    </PouCall>
+    <TaskFBGuid>{3886a9a3-0369-49cd-ae5d-9fb87452bbd2}</TaskFBGuid>
+    <Fb_init>{933126ce-9725-4293-83d8-67d4a4a1ed1a}</Fb_init>
+    <Fb_exit>{5f18368c-896f-4520-a42c-34f207ec921d}</Fb_exit>
+    <CycleUpdate>{280cdda5-72b6-479a-a5a7-8b6b2856b904}</CycleUpdate>
+    <PostCycleUpdate>{c1210326-38be-45e1-a49c-ae05e8235f3c}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

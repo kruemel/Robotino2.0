@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
-  <DUT Name="EnumState" Id="{be140ba5-bd42-4dbc-880c-11c28c9d38f4}">
+  <DUT Name="EnumState" Id="{c2348a90-a5c6-48d0-b159-571f22e67001}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 {attribute 'strict'}
 TYPE EnumState :

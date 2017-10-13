@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
-  <POU Name="MAIN_UDP" Id="{b6e4ea55-b300-41b8-8a89-a1df4d8038ad}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM MAIN_UDP
+  <POU Name="UDP" Id="{0609bed4-bf8f-4f82-907f-a18d61afa454}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM UDP
 VAR
 	//sPaketinhalt	: LREAL;
 	//nPaketlaenge	: UDINT;
@@ -15,7 +15,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[udp1();]]></ST>
     </Implementation>
-    <LineIds Name="MAIN_UDP">
+    <LineIds Name="UDP">
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

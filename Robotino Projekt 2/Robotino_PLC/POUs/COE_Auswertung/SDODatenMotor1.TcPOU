@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
-  <POU Name="SDODatenMotor3" Id="{e8086b65-b4b7-4815-8e33-367739ef64a9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SDODatenMotor3
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="SDODatenMotor1" Id="{58be8c72-c68f-42e0-a6d5-ea46e21dd455}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK SDODatenMotor1
 VAR_INPUT
 END_VAR
 VAR_OUTPUT
 	
-	Motor3Spannung: UINT;
-	Motor3Strom: INT;
-	Motor3Strombegrenzung: UINT;
-	Motor3Regelfehler: INT;
-	Motor3Geschwindigkeit: INT;
-	Motor3Overloadtime: UINT;
-	Motor3Overtemperature: BOOL;
-	Motor3Torqueoverload: BOOL;
-	Motor3Shortcirciut: BOOL;
+	Motor1Spannung: UINT;
+	Motor1Strom: INT;
+	Motor1Strombegrenzung: UINT;
+	Motor1Regelfehler: INT;
+	Motor1Geschwindigkeit: INT;
+	Motor1Overloadtime: UINT;
+	Motor1Overtemperature: BOOL;
+	Motor1Torqueoverload: BOOL;
+	Motor1Shortcirciut: BOOL;
 	
 END_VAR
 VAR
@@ -396,7 +396,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -483,8 +483,8 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Spannung"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Operand">"Motor1Spannung"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -553,8 +553,8 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Spannung"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Operand">"Motor1Spannung"</v>
+                                <v n="Type">"UINT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -769,7 +769,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -856,8 +856,8 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Strom"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Operand">"Motor1Strom"</v>
+                                <v n="Type">"INT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -926,8 +926,8 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Strom"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Operand">"Motor1Strom"</v>
+                                <v n="Type">"INT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -1142,7 +1142,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1229,7 +1229,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Strombegrenzung"</v>
+                                <v n="Operand">"Motor1Strombegrenzung"</v>
                                 <v n="Type">"WORD"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1299,7 +1299,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Strombegrenzung"</v>
+                                <v n="Operand">"Motor1Strombegrenzung"</v>
                                 <v n="Type">"WORD"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1515,7 +1515,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1602,7 +1602,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Regelfehler"</v>
+                                <v n="Operand">"Motor1Regelfehler"</v>
                                 <v n="Type">"WORD"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1672,7 +1672,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Regelfehler"</v>
+                                <v n="Operand">"Motor1Regelfehler"</v>
                                 <v n="Type">"WORD"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1888,7 +1888,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1975,8 +1975,8 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Geschwindigkeit"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Operand">"Motor1Geschwindigkeit"</v>
+                                <v n="Type">"INT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -2045,8 +2045,8 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Geschwindigkeit"</v>
-                                <v n="Type">"WORD"</v>
+                                <v n="Operand">"Motor1Geschwindigkeit"</v>
+                                <v n="Type">"INT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
                                 <v n="Address">""</v>
@@ -2261,7 +2261,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2348,7 +2348,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Overloadtime"</v>
+                                <v n="Operand">"Motor1Overloadtime"</v>
                                 <v n="Type">"WORD"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -2418,7 +2418,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Overloadtime"</v>
+                                <v n="Operand">"Motor1Overloadtime"</v>
                                 <v n="Type">"WORD"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -2634,7 +2634,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2721,7 +2721,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Overtemperature"</v>
+                                <v n="Operand">"Motor1Overtemperature"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -2791,7 +2791,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Overtemperature"</v>
+                                <v n="Operand">"Motor1Overtemperature"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -3007,7 +3007,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -3094,7 +3094,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Torqueoverload"</v>
+                                <v n="Operand">"Motor1Torqueoverload"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -3164,7 +3164,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Torqueoverload"</v>
+                                <v n="Operand">"Motor1Torqueoverload"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -3380,7 +3380,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"1002"</v>
+                            <v n="Operand">"1001"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -3467,7 +3467,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Torqueoverload"</v>
+                                <v n="Operand">"Motor1Torqueoverload"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -3537,7 +3537,7 @@ END_VAR
                           <l2 n="InputItems" cet="BoxTreeOperand">
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"Motor3Torqueoverload"</v>
+                                <v n="Operand">"Motor1Torqueoverload"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
