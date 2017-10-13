@@ -206,7 +206,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"T#2.5ms"</v>
+                                  <v n="Operand">"T#0.2ms"</v>
                                   <v n="Type">"TIME"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -256,7 +256,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"T#2.5ms"</v>
+                            <v n="Operand">"T#0.2ms"</v>
                             <v n="Type">"TIME"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
