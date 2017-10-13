@@ -6981,6 +6981,18 @@
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
+							<Name>SDODatenMotor.StromMotor1</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>SDODatenMotor.StromMotor2</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>SDODatenMotor.StromMotor3</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>Motoransteuerung.enableToMotor1</Name>
 							<Comment>
 								<![CDATA[Outputs: Motor Values and Enable Signal]]>

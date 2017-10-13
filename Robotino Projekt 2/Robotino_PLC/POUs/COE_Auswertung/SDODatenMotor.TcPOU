@@ -6,7 +6,13 @@ VAR
 	DatenMotor1: getSDODatenMotor;
 	DatenMotor2: getSDODatenMotor;
 	DatenMotor3: getSDODatenMotor;
+	
+	StromMotor1 AT%Q* : INT;
+	StromMotor2 AT%Q* : INT;
+	StromMotor3 AT%Q* : INT;
 END_VAR
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
@@ -14,19 +20,26 @@ DatenMotor1.nSlaveAddr := 1002; 	// Klemme 2
 DatenMotor1.nIndex := 16#9020;		// Channel 1
 DatenMotor1();
 
+
 DatenMotor2.nSlaveAddr := 1001;		// Klemme 1
 DatenMotor2.nIndex := 16#9030;		// Channel 2
 DatenMotor2();
 
 DatenMotor3.nSlaveAddr := 1001;		// Klemme 1
 DatenMotor3.nIndex := 16#9020;		// Channel 1
-DatenMotor3();]]></ST>
+DatenMotor3();
+
+
+StromMotor1 := DatenMotor1.Strom;
+StromMotor2 := DatenMotor2.Strom;
+StromMotor3 := DatenMotor3.Strom;]]></ST>
     </Implementation>
     <LineIds Name="SDODatenMotor">
       <LineId Id="31" Count="0" />
       <LineId Id="14" Count="0" />
       <LineId Id="40" Count="0" />
       <LineId Id="33" Count="0" />
+      <LineId Id="49" Count="0" />
       <LineId Id="37" Count="0" />
       <LineId Id="36" Count="0" />
       <LineId Id="41" Count="0" />
@@ -34,6 +47,9 @@ DatenMotor3();]]></ST>
       <LineId Id="43" Count="1" />
       <LineId Id="42" Count="0" />
       <LineId Id="18" Count="0" />
+      <LineId Id="53" Count="1" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="55" Count="1" />
     </LineIds>
   </POU>
 </TcPlcObject>
