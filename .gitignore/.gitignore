@@ -1,0 +1,27 @@
+## Ignore everything but those files starting with "!"
+
+*.*
+!.gitignore
+!.gitattributes
+!readme.md
+!*.tsproj
+!*.plcproj
+!*.xti
+!*.TcTTO
+!*.TcPOU
+!*.TcDUT
+!*.TcGVL
+!*.TcVis
+!*.TcVMO
+!*.TcGTLO
+!*.h
+!*.cpp
+!*.vcxproj
+!*.vcxproj.filters
+!*.def
+!*.idl
+!*.cd
+!*.sys
+!*.pdb
+!*.tmc
+!*.xml
