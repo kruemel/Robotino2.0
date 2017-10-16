@@ -2198,9 +2198,9 @@
 				<Module Id="#x01010040" KeepUnrestoredLinks="2">
 					<Name>Object2 (Gewerk3_Simulink_Regler)</Name>
 					<ImageId>1000</ImageId>
-					<TmcDesc GUID="{3B267CA7-5D7C-403A-A45A-74BDE57F99E2}">
+					<TmcDesc GUID="{F6B72F89-F3B8-4286-B7DF-3C028AF0726A}">
 						<Name>Gewerk3_Simulink_Regler</Name>
-						<CLSID ClassFactory="Gewerk3_Simulink_Regler">{3B267CA7-5D7C-403A-A45A-74BDE57F99E2}</CLSID>
+						<CLSID ClassFactory="Gewerk3_Simulink_Regler">{F6B72F89-F3B8-4286-B7DF-3C028AF0726A}</CLSID>
 						<Info>
 							<TabExtension GUID="{BB6DDFDC-900F-473F-83FC-D83513217B55}"/>
 						</Info>
