@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="Shutdown_2" Id="{ff43ddf7-a026-405f-8a71-89032ba5654f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Shutdown_2
+VAR
+	bStart	AT%I* : BOOL := FALSE;
+	cell1 AT%I*:LREAL:=0;
+	cell2 AT%I*:LREAL:=0;
+	bEntladen :BOOL:=FALSE;
+	
+	Shutdown_Block: NT_Shutdown;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF cell1 <3.1 OR (cell2-cell1)<3.1 THEN
+	bEntladen:=TRUE;
+ELSE
+	bEntladen:=FALSE;
+END_IF
+
+//Shutdown_Block(DELAY:=3,START:=(bSTart OR bEntladen));]]></ST>
+    </Implementation>
+    <LineIds Name="Shutdown_2">
+      <LineId Id="5" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="Greiferansteuerung" Id="{914b4c40-8d67-4edc-a810-6f17709861da}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Greiferansteuerung
+VAR
+	greiferSignal AT%I*:LREAL:=0;
+	greiferEnable AT%Q*:BOOL:=0;
+	greiferValue  AT%Q* :INT:=0;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF greiferSignal=0 THEN
+	greiferEnable:=1;
+	greiferValue:=-32767;
+ELSE
+	greiferEnable:=1;
+	greiferValue:=32767;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="Greiferansteuerung">
+      <LineId Id="5" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="13" Count="1" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
