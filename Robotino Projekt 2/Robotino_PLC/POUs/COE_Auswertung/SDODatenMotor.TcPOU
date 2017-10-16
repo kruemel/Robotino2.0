@@ -10,10 +10,7 @@ VAR
 	StromMotor1 AT%Q* : INT;
 	StromMotor2 AT%Q* : INT;
 	StromMotor3 AT%Q* : INT;
-END_VAR
-
-
-]]></Declaration>
+END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[
 DatenMotor1.nSlaveAddr := 1002; 	// Klemme 2

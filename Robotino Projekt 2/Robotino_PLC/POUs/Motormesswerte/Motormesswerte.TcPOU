@@ -4,6 +4,7 @@
     <Declaration><![CDATA[PROGRAM Motormesswerte
 VAR
 bStart: BOOL := FALSE;	
+zaehler : UINT := 0;
 
 //ENC Daten Differenzieren für Geschwindigkeit
 diffConst:LREAL:=0.0004;//SECONDS
@@ -62,6 +63,7 @@ END_IF
 diff1:=UINT_TO_INT(encDataFromMotor1) - UINT_TO_INT(encDataOldMotor1);
 IF diff1 >= 32767 OR diff1 <= -32767 THEN
 	diff1 := 0;
+	zaehler := zaehler + 1;
 END_IF
 diff2:=UINT_TO_INT(encDataFromMotor2) - UINT_TO_INT(encDataOldMotor2);
 IF diff2 >= 32767 OR diff2 <= -32767 THEN
@@ -113,7 +115,9 @@ encDataOldMotor3:=encDataFromMotor3;]]></ST>
       <LineId Id="348" Count="0" />
       <LineId Id="401" Count="1" />
       <LineId Id="374" Count="1" />
-      <LineId Id="391" Count="2" />
+      <LineId Id="391" Count="1" />
+      <LineId Id="450" Count="0" />
+      <LineId Id="393" Count="0" />
       <LineId Id="376" Count="0" />
       <LineId Id="396" Count="1" />
       <LineId Id="395" Count="0" />
