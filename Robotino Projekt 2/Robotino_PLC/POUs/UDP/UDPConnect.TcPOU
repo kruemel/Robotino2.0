@@ -104,9 +104,9 @@ VAR
 	i	: ULINT := 0;
 	
 	//Offests für aufkgeklebtes Label Robotino 2.0
-	xOffset:LREAL:=0;
-	yOffset:LREAL:=0;
-	thetaOffset:LREAL:=-PI/2;
+	//xOffset:LREAL:=-152.73;
+	//yOffset:LREAL:=-19.84;
+	//thetaOffset:LREAL:=-PI/2;
 END_VAR
 ]]></Declaration>
       <Implementation>
@@ -120,13 +120,13 @@ FOR i := 0 TO 3 DO
 	
 	//UDP.x[4]:=UDP.x[4]+xOffset;
 	//UDP.y[4]:=UDP.y[4]+yOffset;
-	UDP.theta[4]:=UDP.theta[4]+thetaOffset;
-	IF UDP.theta[4] < -PI THEN
-		UDP.theta[4]:=2*PI-UDP.theta[4];
-	END_IF
-	IF UDP.theta[4] >= PI THEN
-		UDP.theta[4]:=UDP.theta[4]-2*PI;
-	END_IF
+	//UDP.theta[4]:=UDP.theta[4]+thetaOffset;
+	//IF UDP.theta[4] < -PI THEN
+	//	UDP.theta[4]:=2*PI-UDP.theta[4];
+	//END_IF
+	//IF UDP.theta[4] > PI THEN
+	//	UDP.theta[4]:=UDP.theta[4]-2*PI;
+	//END_IF
 	
 END_FOR;]]></ST>
       </Implementation>

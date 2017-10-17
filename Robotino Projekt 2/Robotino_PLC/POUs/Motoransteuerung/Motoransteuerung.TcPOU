@@ -8,6 +8,7 @@ VAR
 	nextState:	EnumState:=EnumState.init;
 
 	//Achsen Freischalten
+	
 	enableMotors: BOOL	:=0;
 
 	//Umgerechnete Werte
@@ -64,21 +65,21 @@ END_VAR]]></Declaration>
 
 // ACHTUNG Anpassung: Mindest-Geschwindigkeit = 170, wenn Signal zwischen 80 und 169
 
-IF (vXCartesianToMotors < 170 AND vXCartesianToMotors > 5) THEN
-	vX := 170;
-ELSIF (vXCartesianToMotors > -170 AND vXCartesianToMotors < -5) THEN
-	vX := -170;
-ELSE
+//IF (vXCartesianToMotors < 170 AND vXCartesianToMotors > 5) THEN
+//	vX := 170;
+//ELSIF (vXCartesianToMotors > -170 AND vXCartesianToMotors < -5) THEN
+//	vX := -170;
+//ELSE
 	vX:=vXCartesianToMotors;
-END_IF
+//END_IF
 
-IF vYCartesianToMotors < 170 AND vYCartesianToMotors > 5 THEN
-	vY := 170;
-ELSIF vYCartesianToMotors > -170 AND vYCartesianToMotors < -5 THEN
-	vY := -170;
-ELSE
+//IF vYCartesianToMotors < 170 AND vYCartesianToMotors > 5 THEN
+//	vY := 170;
+//ELSIF vYCartesianToMotors > -170 AND vYCartesianToMotors < -5 THEN
+//	vY := -170;
+//ELSE
 	vY:=vYCartesianToMotors;
-END_IF
+//END_IF
 vTheta:=vThetaCartesianToMotors;
 
 v1 := (-vX * COS(30.0*PI/180))	+ (vY * COS(60.0*PI/180))	+ (vTheta * 135.0);
