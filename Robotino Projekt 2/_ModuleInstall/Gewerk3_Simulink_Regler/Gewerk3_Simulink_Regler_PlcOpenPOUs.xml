@@ -2,7 +2,7 @@
 <!-- Beckhoff Automation GmbH & Co. KG -->
 <!-- TwinCAT Target for MATLAB/Simulink 1.2.1229.0-->
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH &amp; Co. KG" companyURL="www.beckhoff.com" productName="TwinCAT 3 Function - TE1400" productVersion="1.2.1229" creationDateTime="2017-10-16T14:56:03" />
+  <fileHeader companyName="Beckhoff Automation GmbH &amp; Co. KG" companyURL="www.beckhoff.com" productName="TwinCAT 3 Function - TE1400" productVersion="1.2.1229" creationDateTime="2017-10-17T12:45:49" />
   <contentHeader name="TC3_TE1400_GeneratedModule_Gewerk3_Simulink_Regler_FB">
     <coordinateInfo>
       <fbd>
@@ -1967,17 +1967,17 @@ SaveOnlineParametersForInit := SUPER^.SaveOnlineParametersForInit();
 bParametersVerified := false;
                     
 // set module class id for compatibility check
-clsId.Data1 := 16#f6b72f89;
-clsId.Data2 := 16#f3b8;
-clsId.Data3 := 16#4286;
-clsId.Data4[0] := 16#b7;
-clsId.Data4[1] := 16#df;
-clsId.Data4[2] := 16#3c;
-clsId.Data4[3] := 16#02;
-clsId.Data4[4] := 16#8a;
-clsId.Data4[5] := 16#f0;
-clsId.Data4[6] := 16#72;
-clsId.Data4[7] := 16#6a;
+clsId.Data1 := 16#3a69015f;
+clsId.Data2 := 16#6cf4;
+clsId.Data3 := 16#4aec;
+clsId.Data4[0] := 16#b2;
+clsId.Data4[1] := 16#19;
+clsId.Data4[2] := 16#ed;
+clsId.Data4[3] := 16#9c;
+clsId.Data4[4] := 16#bd;
+clsId.Data4[5] := 16#1a;
+clsId.Data4[6] := 16#f6;
+clsId.Data4[7] := 16#06;
 
 AssignClassId(clsId);
                     
@@ -2008,19 +2008,19 @@ stInitData.ModelParameters.N := 12;
 stInitData.ModelParameters.T_R := 0.03;
 stInitData.ModelParameters.T_SP := 0.25;
 stInitData.ModelParameters.T_W := 0.05;
-stInitData.ModelParameters.accuracy_R := 7;
+stInitData.ModelParameters.accuracy_R := 5;
 stInitData.ModelParameters.accuracy_Theta := 0.08726646259971647;
 stInitData.ModelParameters.b_L_theta := 0.015;
 stInitData.ModelParameters.b_L_x := 1.5;
 stInitData.ModelParameters.b_L_y := 1.5;
 stInitData.ModelParameters.m_L_theta := 0.007803508501982758;
-stInitData.ModelParameters.m_L_x := 0.01709072203437452;
-stInitData.ModelParameters.m_L_y := 0.01709072203437452;
+stInitData.ModelParameters.m_L_x := 0.01903270296627266;
+stInitData.ModelParameters.m_L_y := 0.01903270296627266;
 stInitData.ModelParameters.omega_max := 1;
 stInitData.ModelParameters.std_jitter := 0.011;
 stInitData.ModelParameters.t_cam := 0.15;
 stInitData.ModelParameters.t_cycle := 0.005;
-stInitData.ModelParameters.v_max := 300;
+stInitData.ModelParameters.v_max := 500;
 stInitData.ModelParameters.var_cam_theta := 9e-06;
 stInitData.ModelParameters.var_cam_x := 0.09;
 stInitData.ModelParameters.var_cam_y := 0.09;

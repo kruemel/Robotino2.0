@@ -2,21 +2,25 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
   <POU Name="UDP" Id="{0609bed4-bf8f-4f82-907f-a18d61afa454}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM UDP
-VAR
-	//sPaketinhalt	: LREAL;
-	//nPaketlaenge	: UDINT;
-	
+
+VAR_INPUT
 	x	  AT%Q*	: ARRAY[1..4] OF LREAL;
 	y	  AT%Q*	: ARRAY[1..4] OF LREAL;
 	theta AT%Q*	: ARRAY[1..4] OF LREAL;
-	udp1 : UDPConnect;
 END_VAR
-]]></Declaration>
+
+VAR
+	//sPaketinhalt	: LREAL;
+	//nPaketlaenge	: UDINT;
+	udp1 : UDPConnect;
+END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[udp1();]]></ST>
+      <ST><![CDATA[udp1();
+]]></ST>
     </Implementation>
     <LineIds Name="UDP">
       <LineId Id="2" Count="0" />
+      <LineId Id="42" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

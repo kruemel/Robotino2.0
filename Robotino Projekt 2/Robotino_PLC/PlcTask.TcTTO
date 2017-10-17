@@ -22,6 +22,9 @@
     <PouCall>
       <Name>Motoransteuerung</Name>
     </PouCall>
+    <PouCall>
+      <Name>Energieverbrauch</Name>
+    </PouCall>
     <TaskFBGuid>{3886a9a3-0369-49cd-ae5d-9fb87452bbd2}</TaskFBGuid>
     <Fb_init>{933126ce-9725-4293-83d8-67d4a4a1ed1a}</Fb_init>
     <Fb_exit>{5f18368c-896f-4520-a42c-34f207ec921d}</Fb_exit>

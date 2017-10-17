@@ -7,6 +7,7 @@ VAR_INPUT
 END_VAR
 VAR_OUTPUT
 END_VAR
+
 VAR
 	{attribute 'TcInitSymbol'}
     oid:              OTCID; 
@@ -15,6 +16,8 @@ VAR
     nReceivedPakets:  UINT;
     hrInit :          HRESULT;
     hrSend :          HRESULT;
+	
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -99,6 +102,11 @@ END_VAR
 
 VAR
 	i	: ULINT := 0;
+	
+	//Offests für aufkgeklebtes Label Robotino 2.0
+	xOffset:LREAL:=0;
+	yOffset:LREAL:=0;
+	thetaOffset:LREAL:=-PI/2;
 END_VAR
 ]]></Declaration>
       <Implementation>
@@ -109,6 +117,17 @@ FOR i := 0 TO 3 DO
 	memcpy(ADR(UDP.x[i+1]),pData+((i*3)*8),8);
 	memcpy(ADR(UDP.y[i+1]),pData+((i*3+1)*8),8);
 	memcpy(ADR(UDP.theta[i+1]),pData+((i*3+2)*8),8);
+	
+	//UDP.x[4]:=UDP.x[4]+xOffset;
+	//UDP.y[4]:=UDP.y[4]+yOffset;
+	UDP.theta[4]:=UDP.theta[4]+thetaOffset;
+	IF UDP.theta[4] < -PI THEN
+		UDP.theta[4]:=2*PI-UDP.theta[4];
+	END_IF
+	IF UDP.theta[4] >= PI THEN
+		UDP.theta[4]:=UDP.theta[4]-2*PI;
+	END_IF
+	
 END_FOR;]]></ST>
       </Implementation>
     </Method>
@@ -175,6 +194,15 @@ METHOD TcRelease : UDINT
       <LineId Id="79" Count="0" />
       <LineId Id="77" Count="0" />
       <LineId Id="80" Count="1" />
+      <LineId Id="136" Count="2" />
+      <LineId Id="148" Count="0" />
+      <LineId Id="140" Count="0" />
+      <LineId Id="150" Count="0" />
+      <LineId Id="141" Count="0" />
+      <LineId Id="147" Count="0" />
+      <LineId Id="151" Count="0" />
+      <LineId Id="142" Count="0" />
+      <LineId Id="139" Count="0" />
       <LineId Id="104" Count="0" />
     </LineIds>
     <LineIds Name="UDPConnect.TcAddRef">

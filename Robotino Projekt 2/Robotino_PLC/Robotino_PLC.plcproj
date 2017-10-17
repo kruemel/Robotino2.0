@@ -51,9 +51,6 @@
     <Compile Include="POUs\Shutdown\Shutdown.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Shutdown\Shutdown_2.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\UDP\UDP.TcPOU">
       <SubType>Code</SubType>
     </Compile>

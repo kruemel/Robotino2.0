@@ -7,7 +7,13 @@ VAR
 	greiferEnable AT%Q*:BOOL:=0;
 	greiferValue  AT%Q* :INT:=0;
 	
+	greiferSliderFromIO 	AT%I*:BOOL:=0;
+	greiferSliderToSimulink AT%Q*:LREAL:=0;
+	
+	greiferLichtschrankeFromIO AT%I*:BOOL:=0;
+	greiferLichtschrankeToSimulink AT%Q*:LREAL:=0;
 END_VAR
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF greiferSignal=0 THEN
@@ -17,7 +23,9 @@ ELSE
 	greiferEnable:=1;
 	greiferValue:=32767;
 END_IF
-]]></ST>
+
+greiferSliderToSimulink:=BOOL_TO_LREAL(NOT(greiferSliderFromIO));
+greiferLichtschrankeToSimulink:=BOOL_TO_LREAL(NOT(greiferLichtschrankeFromIO));]]></ST>
     </Implementation>
     <LineIds Name="Greiferansteuerung">
       <LineId Id="5" Count="0" />
@@ -26,7 +34,8 @@ END_IF
       <LineId Id="13" Count="1" />
       <LineId Id="16" Count="0" />
       <LineId Id="15" Count="0" />
-      <LineId Id="9" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="38" Count="1" />
     </LineIds>
   </POU>
 </TcPlcObject>
