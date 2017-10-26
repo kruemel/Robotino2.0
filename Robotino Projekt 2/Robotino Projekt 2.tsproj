@@ -2193,6 +2193,9 @@
 				<Task Id="7" Priority="1" CycleTime="4000" AmsPort="354" Affinity="#x00000002" AdtTasks="true">
 					<Name>PlcTask1</Name>
 				</Task>
+				<Task Id="3" Priority="30" CycleTime="2000000" AmsPort="350" AdtTasks="true">
+					<Name>VISU_TASK</Name>
+				</Task>
 			</Tasks>
 			<Modules>
 				<Module Id="#x01010040" KeepUnrestoredLinks="2">
@@ -7693,16 +7696,16 @@
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>Greiferansteuerung.greiferSignal</Name>
-							<Type>LREAL</Type>
-						</Var>
-						<Var>
 							<Name>Greiferansteuerung.greiferSliderFromIO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Greiferansteuerung.greiferLichtschrankeFromIO</Name>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Greiferansteuerung.greiferSignal</Name>
+							<Type>LREAL</Type>
 						</Var>
 						<Var>
 							<Name>Motoransteuerung.bumper</Name>
@@ -7915,6 +7918,7 @@
 						</InitSymbol>
 					</InitSymbols>
 					<TaskPouOids>
+						<TaskPouOid Prio="30" OTCID="#x08502042"/>
 						<TaskPouOid Prio="1" OTCID="#x08502041"/>
 					</TaskPouOids>
 				</Instance>
