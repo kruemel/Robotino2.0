@@ -36,7 +36,7 @@
     <Compile Include="POUs\COE_Auswertung\SDOMotorErrorFlags.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Energieverbrauch\Energieverbrauch.TcPOU">
+    <Compile Include="POUs\Energieverbrauch\Energieverbrauch_ST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Greiferansteuerung\Greiferansteuerung.TcPOU">
@@ -49,6 +49,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Shutdown\Shutdown.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Shutdown\Shutdown1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\UDP\UDP.TcPOU">
