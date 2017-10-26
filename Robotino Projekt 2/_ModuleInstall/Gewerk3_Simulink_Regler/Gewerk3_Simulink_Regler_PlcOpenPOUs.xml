@@ -2,7 +2,7 @@
 <!-- Beckhoff Automation GmbH & Co. KG -->
 <!-- TwinCAT Target for MATLAB/Simulink 1.2.1229.0-->
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH &amp; Co. KG" companyURL="www.beckhoff.com" productName="TwinCAT 3 Function - TE1400" productVersion="1.2.1229" creationDateTime="2017-10-26T06:31:58" />
+  <fileHeader companyName="Beckhoff Automation GmbH &amp; Co. KG" companyURL="www.beckhoff.com" productName="TwinCAT 3 Function - TE1400" productVersion="1.2.1229" creationDateTime="2017-10-26T14:10:53" />
   <contentHeader name="TC3_TE1400_GeneratedModule_Gewerk3_Simulink_Regler_FB">
     <coordinateInfo>
       <fbd>
@@ -1967,17 +1967,17 @@ SaveOnlineParametersForInit := SUPER^.SaveOnlineParametersForInit();
 bParametersVerified := false;
                     
 // set module class id for compatibility check
-clsId.Data1 := 16#310c8546;
-clsId.Data2 := 16#7fd3;
-clsId.Data3 := 16#451f;
-clsId.Data4[0] := 16#a7;
-clsId.Data4[1] := 16#e5;
-clsId.Data4[2] := 16#b0;
-clsId.Data4[3] := 16#49;
-clsId.Data4[4] := 16#97;
-clsId.Data4[5] := 16#9a;
-clsId.Data4[6] := 16#42;
-clsId.Data4[7] := 16#f5;
+clsId.Data1 := 16#5bd280de;
+clsId.Data2 := 16#c998;
+clsId.Data3 := 16#4f4e;
+clsId.Data4[0] := 16#ae;
+clsId.Data4[1] := 16#df;
+clsId.Data4[2] := 16#13;
+clsId.Data4[3] := 16#6c;
+clsId.Data4[4] := 16#32;
+clsId.Data4[5] := 16#14;
+clsId.Data4[6] := 16#16;
+clsId.Data4[7] := 16#4d;
 
 AssignClassId(clsId);
                     
@@ -2014,13 +2014,13 @@ stInitData.ModelParameters.b_L_theta := 0.015;
 stInitData.ModelParameters.b_L_x := 1.5;
 stInitData.ModelParameters.b_L_y := 1.5;
 stInitData.ModelParameters.m_L_theta := 0.007803508501982758;
-stInitData.ModelParameters.m_L_x := 0.01709072203437452;
-stInitData.ModelParameters.m_L_y := 0.01709072203437452;
+stInitData.ModelParameters.m_L_x := 0.01903270296627266;
+stInitData.ModelParameters.m_L_y := 0.01903270296627266;
 stInitData.ModelParameters.omega_max := 1;
 stInitData.ModelParameters.std_jitter := 0.011;
 stInitData.ModelParameters.t_cam := 0.15;
 stInitData.ModelParameters.t_cycle := 0.005;
-stInitData.ModelParameters.v_max := 300;
+stInitData.ModelParameters.v_max := 500;
 stInitData.ModelParameters.var_cam_theta := 9e-06;
 stInitData.ModelParameters.var_cam_x := 0.09;
 stInitData.ModelParameters.var_cam_y := 0.09;

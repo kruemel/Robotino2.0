@@ -2173,7 +2173,7 @@
 		<ImageData Id="1006">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1007">424de6000000000000007600000028000000100000000e000000010004000000000070000000000000000000000000000000000000000000000000008000008000000080800080000000800080008080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00ffffffffffffffffff788833338887ffff78883bb38887ffffffff3bb3ffffffffffff8778fffffffffffffffffffffffffffffffff999ffff78f78fffffffffff78f78ffff999ffff78f7888fffffffff78f78f78f999ffff78f78f78ffffffff78f7888ff999ffffffffffffffffff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{21D39D90-16C0-4CFE-B03D-30202446730A}" Target64Bit="true" ShowHideConfigurations="#x106">
+	<Project ProjectGUID="{21D39D90-16C0-4CFE-B03D-30202446730A}" TargetNetId="5.49.201.214.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
 		<System>
 			<Settings MaxCpus="2" NonWinCpus="1">
 				<Cpu BaseTime="2000"/>
@@ -2198,9 +2198,9 @@
 				<Module Id="#x01010040" KeepUnrestoredLinks="2">
 					<Name>Object2 (Gewerk3_Simulink_Regler)</Name>
 					<ImageId>1000</ImageId>
-					<TmcDesc GUID="{310C8546-7FD3-451F-A7E5-B049979A42F5}">
+					<TmcDesc GUID="{5BD280DE-C998-4F4E-AEDF-136C3214164D}">
 						<Name>Gewerk3_Simulink_Regler</Name>
-						<CLSID ClassFactory="Gewerk3_Simulink_Regler">{310C8546-7FD3-451F-A7E5-B049979A42F5}</CLSID>
+						<CLSID ClassFactory="Gewerk3_Simulink_Regler">{5BD280DE-C998-4F4E-AEDF-136C3214164D}</CLSID>
 						<Info>
 							<TabExtension GUID="{BB6DDFDC-900F-473F-83FC-D83513217B55}"/>
 						</Info>
@@ -2295,7 +2295,7 @@
 								<BaseType GUID="{C246F369-EAD8-B41A-C05D-9BA010FB2D55}">ExtU_Gewerk3_Simulink_Regler_T</BaseType>
 								<PTCID>#x80000000</PTCID>
 							</Parameter>
-							<Parameter>
+							<Parameter ShowSubItems="true">
 								<Name>ModelParameters</Name>
 								<BitSize>10752</BitSize>
 								<BaseType GUID="{590201C8-03E3-A12E-632F-32155B0DF561}">P_Gewerk3_Simulink_Regler_T</BaseType>
@@ -6079,7 +6079,7 @@
 							</Value>
 							<Value>
 								<Name>ModelParameters.T_SP</Name>
-								<Value>0.25</Value>
+								<Value>0.3</Value>
 							</Value>
 							<Value>
 								<Name>ModelParameters.T_W</Name>
@@ -6135,7 +6135,7 @@
 							</Value>
 							<Value>
 								<Name>ModelParameters.v_max</Name>
-								<Value>300</Value>
+								<Value>500</Value>
 							</Value>
 							<Value>
 								<Name>ModelParameters.var_cam_theta</Name>
@@ -7735,6 +7735,38 @@
 							<Name>Shutdown.cell12</Name>
 							<Type>INT</Type>
 						</Var>
+						<Var>
+							<Name>PDODatenMotor.StromPDOMotor1</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>PDODatenMotor.SpannungPDOMotor1</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>PDODatenMotor.StromPDOMotor2</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>PDODatenMotor.SpannungPDOMotor2</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>PDODatenMotor.StromPDOMotor3</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>PDODatenMotor.SpannungPDOMotor3</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>PDODatenMotor.StromPDOGreifer</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>PDODatenMotor.SpannungPDOGreifer</Name>
+							<Type>UINT</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
@@ -7862,6 +7894,16 @@
 							<OwnerB Name="TIRC^TcCOM Objects^Object2 (Gewerk3_Simulink_Regler)">
 								<Link VarA="Motoransteuerung.vThetaCartesianToMotors" TypeA="LREAL" InOutA="0" GuidA="{18071995-0000-0000-0000-00000000000E}" VarB="Output^thetaCartesianToMotors" RestoreInfo="BNotFound"/>
 								<Link VarA="Motoransteuerung.vYCartesianToMotors" TypeA="LREAL" InOutA="0" GuidA="{18071995-0000-0000-0000-00000000000E}" VarB="Output^vYCartesianToMotors" RestoreInfo="BNotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2017-10-26T16:32:32">
+						<OwnerA Name="InputDst" Prefix="TIPC^Robotino_PLC^Robotino_PLC Instance" Type="1">
+							<OwnerB Name="TIID^Robotino SPS^Term 1 (EK1200)^Motorklemme 1">
+								<Link VarA="PDODatenMotor.StromPDOMotor2" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="DCM Synchron info data Channel 2^StromM2" RestoreInfo="TypeMismatch" OldTypeA="UINT" OldGuidA="{18071995-0000-0000-0000-000000000005}" NewTypeA="INT" NewGuidA="{18071995-0000-0000-0000-000000000006}"/>
+							</OwnerB>
+							<OwnerB Name="TIID^Robotino SPS^Term 1 (EK1200)^Motorklemme 2">
+								<Link VarA="PDODatenMotor.StromPDOMotor3" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="DCM Synchron info data Channel 1^StromM3" RestoreInfo="TypeMismatch" OldTypeA="UINT" OldGuidA="{18071995-0000-0000-0000-000000000005}" NewTypeA="INT" NewGuidA="{18071995-0000-0000-0000-000000000006}"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -8087,7 +8129,7 @@
 							<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 							<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 							<SyncMan>001110002400010003000000000000001000001124010000</SyncMan>
-							<SyncMan>001210002000010004000000000000001000001220010000</SyncMan>
+							<SyncMan>001218002000010004000000000000001000001220010000</SyncMan>
 							<Fmmu>0000000000000000001100020100000001000000000000000000000000000000</Fmmu>
 							<Fmmu>0000000000000000001200010100000002000000000000000000000000000000</Fmmu>
 							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
@@ -8353,11 +8395,11 @@
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
-							<Pdo Name="DCM Synchron info data Channel 1" Index="#x1a07" Flags="#x0010">
-								<Entry Name="Info data 1" Index="#x6020" Sub="#x11">
+							<Pdo Name="DCM Synchron info data Channel 1" Index="#x1a07" Flags="#x0010" SyncMan="3">
+								<Entry Name="SpannungM1" Index="#x6020" Sub="#x11">
 									<Type>UINT</Type>
 								</Entry>
-								<Entry Name="Info data 2" Index="#x6020" Sub="#x12">
+								<Entry Name="StromM1" Index="#x6020" Sub="#x12">
 									<Type>UINT</Type>
 								</Entry>
 							</Pdo>
@@ -8405,11 +8447,11 @@
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
-							<Pdo Name="DCM Synchron info data Channel 2" Index="#x1a09" Flags="#x0010">
-								<Entry Name="Info data 1" Index="#x6030" Sub="#x11">
+							<Pdo Name="DCM Synchron info data Channel 2" Index="#x1a09" Flags="#x0010" SyncMan="3">
+								<Entry Name="SpannungM2" Index="#x6030" Sub="#x11">
 									<Type>UINT</Type>
 								</Entry>
-								<Entry Name="Info data 2" Index="#x6030" Sub="#x12">
+								<Entry Name="StromM2" Index="#x6030" Sub="#x12">
 									<Type>UINT</Type>
 								</Entry>
 							</Pdo>
@@ -8832,7 +8874,7 @@
 							<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
 							<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
 							<SyncMan>001110002400010003000000000000001000001124010000</SyncMan>
-							<SyncMan>001210002000010004000000000000001000001220010000</SyncMan>
+							<SyncMan>001218002000010004000000000000001000001220010000</SyncMan>
 							<Fmmu>0000000000000000001100020100000001000000000000000000000000000000</Fmmu>
 							<Fmmu>0000000000000000001200010100000002000000000000000000000000000000</Fmmu>
 							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
@@ -9098,11 +9140,11 @@
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
-							<Pdo Name="DCM Synchron info data Channel 1" Index="#x1a07" Flags="#x0010">
-								<Entry Name="Info data 1" Index="#x6020" Sub="#x11">
+							<Pdo Name="DCM Synchron info data Channel 1" Index="#x1a07" Flags="#x0010" SyncMan="3">
+								<Entry Name="SpannungM3" Index="#x6020" Sub="#x11">
 									<Type>UINT</Type>
 								</Entry>
-								<Entry Name="Info data 2" Index="#x6020" Sub="#x12">
+								<Entry Name="StromM3" Index="#x6020" Sub="#x12">
 									<Type>UINT</Type>
 								</Entry>
 							</Pdo>
@@ -9150,11 +9192,11 @@
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
-							<Pdo Name="DCM Synchron info data Channel 2" Index="#x1a09" Flags="#x0010">
-								<Entry Name="Info data 1" Index="#x6030" Sub="#x11">
+							<Pdo Name="DCM Synchron info data Channel 2" Index="#x1a09" Flags="#x0010" SyncMan="3">
+								<Entry Name="SpannungGreifer" Index="#x6030" Sub="#x11">
 									<Type>UINT</Type>
 								</Entry>
-								<Entry Name="Info data 2" Index="#x6030" Sub="#x12">
+								<Entry Name="StromGreifer" Index="#x6030" Sub="#x12">
 									<Type>UINT</Type>
 								</Entry>
 							</Pdo>
@@ -10882,6 +10924,7 @@ Bit1: Value bigger/equal Limit2]]>
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-0030-0304-2000-010130000403}" Id="#x02030020"/>
+		<MappingInfo Identifier="{02010040-0010-0304-2000-010110000403}" Id="#x02030060" Watchdog="00000000000000000000000000000000"/>
 		<MappingInfo Identifier="{02010040-0060-0201-2000-010140000101}" Id="#x02030050" Watchdog="14000000040000000400000004000000"/>
 		<MappingInfo Identifier="{00000000-2041-0850-4020-500810000403}" Id="#x02030010"/>
 		<MappingInfo Identifier="{08502041-0060-0201-4020-500840000101}" Id="#x02030030" Watchdog="32000000040000000400000004000000"/>
@@ -10916,6 +10959,9 @@ Bit1: Value bigger/equal Limit2]]>
 			<OwnerB Name="TIID^Robotino SPS^Term 1 (EK1200)^Motorklemme 1">
 				<Link VarA="PlcTask Inputs^Motormesswerte.encDataFromMotor1" VarB="ENC Status compact Channel 1^Counter value"/>
 				<Link VarA="PlcTask Inputs^Motormesswerte.encDataFromMotor2" VarB="ENC Status compact Channel 2^Counter value"/>
+				<Link VarA="PlcTask Inputs^PDODatenMotor.SpannungPDOMotor1" VarB="DCM Synchron info data Channel 1^SpannungM1"/>
+				<Link VarA="PlcTask Inputs^PDODatenMotor.SpannungPDOMotor2" VarB="DCM Synchron info data Channel 2^SpannungM2"/>
+				<Link VarA="PlcTask Inputs^PDODatenMotor.StromPDOMotor1" VarB="DCM Synchron info data Channel 1^StromM1"/>
 				<Link VarA="PlcTask Outputs^Motoransteuerung.enableToMotor1" VarB="DCM Control Channel 1^Control^Enable"/>
 				<Link VarA="PlcTask Outputs^Motoransteuerung.enableToMotor2" VarB="DCM Control Channel 2^Control^Enable"/>
 				<Link VarA="PlcTask Outputs^Motoransteuerung.velocityToMotor1" VarB="DCM Velocity Channel 1^Velocity"/>
@@ -10923,6 +10969,9 @@ Bit1: Value bigger/equal Limit2]]>
 			</OwnerB>
 			<OwnerB Name="TIID^Robotino SPS^Term 1 (EK1200)^Motorklemme 2">
 				<Link VarA="PlcTask Inputs^Motormesswerte.encDataFromMotor3" VarB="ENC Status compact Channel 1^Counter value"/>
+				<Link VarA="PlcTask Inputs^PDODatenMotor.SpannungPDOGreifer" VarB="DCM Synchron info data Channel 2^SpannungGreifer"/>
+				<Link VarA="PlcTask Inputs^PDODatenMotor.SpannungPDOMotor3" VarB="DCM Synchron info data Channel 1^SpannungM3"/>
+				<Link VarA="PlcTask Inputs^PDODatenMotor.StromPDOGreifer" VarB="DCM Synchron info data Channel 2^StromGreifer"/>
 				<Link VarA="PlcTask Outputs^Greiferansteuerung.greiferEnable" VarB="DCM Control Channel 2^Control^Enable"/>
 				<Link VarA="PlcTask Outputs^Greiferansteuerung.greiferValue" VarB="DCM Velocity Channel 2^Velocity"/>
 				<Link VarA="PlcTask Outputs^Motoransteuerung.enableToMotor3" VarB="DCM Control Channel 1^Control^Enable"/>
@@ -10930,6 +10979,9 @@ Bit1: Value bigger/equal Limit2]]>
 			</OwnerB>
 			<OwnerB Name="TIRC^TcCOM Objects^Object2 (Gewerk3_Simulink_Regler)">
 				<Link VarA="PlcTask Inputs^Greiferansteuerung.greiferSignal" VarB="Output^Grabber"/>
+				<Link VarA="PlcTask Inputs^Motoransteuerung.vThetaCartesianToMotors" VarB="Output^vThetaToMotors"/>
+				<Link VarA="PlcTask Inputs^Motoransteuerung.vXCartesianToMotors" VarB="Output^vXToMotors"/>
+				<Link VarA="PlcTask Inputs^Motoransteuerung.vYCartesianToMotors" VarB="Output^vYToMotors"/>
 				<Link VarA="PlcTask Outputs^Greiferansteuerung.greiferLichtschrankeToSimulink" VarB="Input^processData[0]"/>
 				<Link VarA="PlcTask Outputs^Greiferansteuerung.greiferSliderToSimulink" VarB="Input^processData[1]"/>
 				<Link VarA="PlcTask Outputs^Motormesswerte.vXCartesianFromMotors" VarB="Input^processData[2]"/>

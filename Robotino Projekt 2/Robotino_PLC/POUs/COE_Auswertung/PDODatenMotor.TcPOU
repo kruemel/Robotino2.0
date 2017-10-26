@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="PDODatenMotor" Id="{cb7a9b27-fcc7-4f64-af1c-7d4defbe2f79}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PDODatenMotor
+VAR
+	StromPDOMotor1 AT%I* 		: INT;
+	SpannungPDOMotor1 AT%I*		: UINT;
+	StromPDOMotor2 AT%I* 		: INT;
+	SpannungPDOMotor2 AT%I*	 	: UINT;
+	StromPDOMotor3 AT%I* 		: INT;
+	SpannungPDOMotor3 AT%I*		: UINT;
+	
+	StromPDOGreifer AT%I*		: INT;
+	SpannungPDOGreifer AT%I*	: UINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="PDODatenMotor">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

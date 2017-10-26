@@ -21,6 +21,9 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\COE_Auswertung\PDODatenMotor.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\COE_Auswertung\SDODatenMotor.TcPOU">
       <SubType>Code</SubType>
     </Compile>

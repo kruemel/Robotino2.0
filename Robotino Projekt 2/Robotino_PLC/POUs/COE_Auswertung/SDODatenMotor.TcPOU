@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
   <POU Name="SDODatenMotor" Id="{38769b05-daee-4b94-978b-eba83957c752}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM SDODatenMotor
 VAR
@@ -14,6 +14,7 @@ VAR
 	SpannungMotor1 AT%Q*:UINT;
 	SpannungMotor2 AT%Q*:UINT;
 	SpannungMotor3 AT%Q*:UINT;
+	
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[
