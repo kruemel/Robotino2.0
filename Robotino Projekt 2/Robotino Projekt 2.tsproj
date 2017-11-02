@@ -1379,6 +1379,33 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
+			<Name GUID="{CF440C19-23FE-4A47-B7C2-2E42BEDDA12C}" Namespace="Tc2_SerialCom" AutoDeleteType="true">PcComInData</Name>
+			<Comment>
+				<![CDATA[ This data type is corresponding to the
+   PC COM-Port data structure used in
+   the TwinCAT SystemManager. 
+   (KL-6xxx emulation mode with 64 data bytes)
+]]>
+			</Comment>
+			<BitSize>528</BitSize>
+			<SubItem>
+				<Name>SerStatus</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<ArrayInfo>
+					<LBound>0</LBound>
+					<Elements>64</Elements>
+				</ArrayInfo>
+				<BitSize>512</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
 			<Name GUID="{CF887A53-7490-A600-6B5D-04343BF0EA3A}" IecBaseType="true" AutoDeleteType="true">ARRAY [1..4] OF LREAL</Name>
 			<BitSize>256</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</BaseType>
@@ -1386,6 +1413,33 @@
 				<LBound>1</LBound>
 				<Elements>4</Elements>
 			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{4B9B68FD-4816-4305-86F8-0B40630CF785}" Namespace="Tc2_SerialCom" AutoDeleteType="true">PcComOutData</Name>
+			<Comment>
+				<![CDATA[ This data type is corresponding to the
+   PC COM-Port data structure used in
+   the TwinCAT SystemManager. 
+   (KL-6xxx emulation mode with 64 data bytes)
+]]>
+			</Comment>
+			<BitSize>528</BitSize>
+			<SubItem>
+				<Name>SerCtrl</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<ArrayInfo>
+					<LBound>0</LBound>
+					<Elements>64</Elements>
+				</ArrayInfo>
+				<BitSize>512</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
 		</DataType>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
@@ -2173,7 +2227,7 @@
 		<ImageData Id="1006">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1007">424de6000000000000007600000028000000100000000e000000010004000000000070000000000000000000000000000000000000000000000000008000008000000080800080000000800080008080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00ffffffffffffffffff788833338887ffff78883bb38887ffffffff3bb3ffffffffffff8778fffffffffffffffffffffffffffffffff999ffff78f78fffffffffff78f78ffff999ffff78f7888fffffffff78f78f78f999ffff78f78f78ffffffff78f7888ff999ffffffffffffffffff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{21D39D90-16C0-4CFE-B03D-30202446730A}" TargetNetId="5.49.201.214.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
+	<Project ProjectGUID="{21D39D90-16C0-4CFE-B03D-30202446730A}" Target64Bit="true" ShowHideConfigurations="#x106">
 		<System>
 			<Settings MaxCpus="2" NonWinCpus="1">
 				<Cpu BaseTime="2000"/>
@@ -7767,6 +7821,13 @@
 							<Name>PDODatenMotor.SpannungPDOGreifer</Name>
 							<Type>UINT</Type>
 						</Var>
+						<Var>
+							<Name>BackgroundPcCOM.stIn_PcCom</Name>
+							<Comment>
+								<![CDATA[ linked to the port in the TwinCAT System Manager ]]>
+							</Comment>
+							<Type GUID="{CF440C19-23FE-4A47-B7C2-2E42BEDDA12C}" Namespace="Tc2_SerialCom">PcComInData</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
@@ -7793,14 +7854,6 @@
 						<Var>
 							<Name>SDODatenMotor.SpannungMotor3</Name>
 							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>Greiferansteuerung.greiferEnable</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>Greiferansteuerung.greiferValue</Name>
-							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>Motormesswerte.posXCartesianFromMotors</Name>
@@ -7854,6 +7907,14 @@
 							<Type GUID="{CF887A53-7490-A600-6B5D-04343BF0EA3A}">ARRAY [1..4] OF LREAL</Type>
 						</Var>
 						<Var>
+							<Name>Greiferansteuerung.greiferEnable</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Greiferansteuerung.greiferValue</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>Greiferansteuerung.greiferSliderToSimulink</Name>
 							<Type>LREAL</Type>
 						</Var>
@@ -7887,6 +7948,13 @@
 						<Var>
 							<Name>Motoransteuerung.velocityToMotor2</Name>
 							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>BackgroundPcCOM.stOut_PcCom</Name>
+							<Comment>
+								<![CDATA[ linked to the port in the TwinCAT System Manager ]]>
+							</Comment>
+							<Type GUID="{4B9B68FD-4816-4305-86F8-0B40630CF785}" Namespace="Tc2_SerialCom">PcComOutData</Type>
 						</Var>
 					</Vars>
 					<UnrestoredVarLinks ImportTime="2017-10-16T14:58:48">
@@ -8085,7 +8153,7 @@
 			</Project>
 		</Cpp>
 		<Io>
-			<Device DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="5.49.201.214.2.1" RemoteName="Robotino SPS" Id="1">
+			<Device DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="192.168.0.109.2.1" RemoteName="Robotino SPS" Id="1">
 				<Name>Robotino SPS</Name>
 				<AddressInfo>
 					<Ccat>
@@ -10920,6 +10988,23 @@ Bit1: Value bigger/equal Limit2]]>
 					<Esl SyncSlaveProtocolPort="-1"/>
 				</Ethernet>
 			</Device>
+			<Device DevType="11" AmsPort="28677" Id="5">
+				<Name>RS232</Name>
+				<AddressInfo>
+					<Pci>
+						<Address>-793665536</Address>
+						<Size>4096</Size>
+						<BusNo>0</BusNo>
+						<SlotNo>126</SlotNo>
+						<VendorId>32902</VendorId>
+						<DeviceId>3850</DeviceId>
+					</Pci>
+				</AddressInfo>
+				<Image Id="5" AddrType="1" ImageType="3">
+					<Name>Prozessabbild</Name>
+				</Image>
+				<Serial Baud="19200" StopBit="1" RsType="1" UPSDisableSysShutdown="true" WaitTimeToShutdown="60" DataSize="64" BufSize="4096" DataBit="8" SyncMode="true" Is16950="true" FifoSize="16" ComPortNo="3" Timeout="300"/>
+			</Device>
 		</Io>
 	</Project>
 	<Mappings>
@@ -10927,6 +11012,7 @@ Bit1: Value bigger/equal Limit2]]>
 		<MappingInfo Identifier="{02010040-0010-0304-2000-010110000403}" Id="#x02030060" Watchdog="00000000000000000000000000000000"/>
 		<MappingInfo Identifier="{02010040-0060-0201-2000-010140000101}" Id="#x02030050" Watchdog="14000000040000000400000004000000"/>
 		<MappingInfo Identifier="{00000000-2041-0850-4020-500810000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2041-0850-4020-500850000403}" Id="#x02030070"/>
 		<MappingInfo Identifier="{08502041-0060-0201-4020-500840000101}" Id="#x02030030" Watchdog="32000000040000000400000004000000"/>
 		<MappingInfo Identifier="{02010060-0010-0304-4000-010110000403}" Id="#x02030040" Watchdog="00000000000000000000000000000000"/>
 		<OwnerA Name="TIID^Robotino SPS">
@@ -10946,6 +11032,138 @@ Bit1: Value bigger/equal Limit2]]>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIPC^Robotino_PLC^Robotino_PLC Instance">
+			<OwnerB Name="TIID^RS232">
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[0]" VarB="Inputs^Data1"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[10]" VarB="Inputs^Data11"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[11]" VarB="Inputs^Data12"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[12]" VarB="Inputs^Data13"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[13]" VarB="Inputs^Data14"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[14]" VarB="Inputs^Data15"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[15]" VarB="Inputs^Data16"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[16]" VarB="Inputs^Data17"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[17]" VarB="Inputs^Data18"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[18]" VarB="Inputs^Data19"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[19]" VarB="Inputs^Data20"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[1]" VarB="Inputs^Data2"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[20]" VarB="Inputs^Data21"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[21]" VarB="Inputs^Data22"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[22]" VarB="Inputs^Data23"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[23]" VarB="Inputs^Data24"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[24]" VarB="Inputs^Data25"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[25]" VarB="Inputs^Data26"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[26]" VarB="Inputs^Data27"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[27]" VarB="Inputs^Data28"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[28]" VarB="Inputs^Data29"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[29]" VarB="Inputs^Data30"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[2]" VarB="Inputs^Data3"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[30]" VarB="Inputs^Data31"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[31]" VarB="Inputs^Data32"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[32]" VarB="Inputs^Data33"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[33]" VarB="Inputs^Data34"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[34]" VarB="Inputs^Data35"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[35]" VarB="Inputs^Data36"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[36]" VarB="Inputs^Data37"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[37]" VarB="Inputs^Data38"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[38]" VarB="Inputs^Data39"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[39]" VarB="Inputs^Data40"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[3]" VarB="Inputs^Data4"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[40]" VarB="Inputs^Data41"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[41]" VarB="Inputs^Data42"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[42]" VarB="Inputs^Data43"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[43]" VarB="Inputs^Data44"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[44]" VarB="Inputs^Data45"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[45]" VarB="Inputs^Data46"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[46]" VarB="Inputs^Data47"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[47]" VarB="Inputs^Data48"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[48]" VarB="Inputs^Data49"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[49]" VarB="Inputs^Data50"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[4]" VarB="Inputs^Data5"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[50]" VarB="Inputs^Data51"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[51]" VarB="Inputs^Data52"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[52]" VarB="Inputs^Data53"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[53]" VarB="Inputs^Data54"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[54]" VarB="Inputs^Data55"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[55]" VarB="Inputs^Data56"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[56]" VarB="Inputs^Data57"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[57]" VarB="Inputs^Data58"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[58]" VarB="Inputs^Data59"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[59]" VarB="Inputs^Data60"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[5]" VarB="Inputs^Data6"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[60]" VarB="Inputs^Data61"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[61]" VarB="Inputs^Data62"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[62]" VarB="Inputs^Data63"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[63]" VarB="Inputs^Data64"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[6]" VarB="Inputs^Data7"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[7]" VarB="Inputs^Data8"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[8]" VarB="Inputs^Data9"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^D[9]" VarB="Inputs^Data10"/>
+				<Link VarA="PlcTask Inputs^BackgroundPcCOM.stIn_PcCom^SerStatus" VarB="Inputs^Status"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[0]" VarB="Outputs^Data1"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[10]" VarB="Outputs^Data11"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[11]" VarB="Outputs^Data12"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[12]" VarB="Outputs^Data13"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[13]" VarB="Outputs^Data14"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[14]" VarB="Outputs^Data15"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[15]" VarB="Outputs^Data16"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[16]" VarB="Outputs^Data17"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[17]" VarB="Outputs^Data18"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[18]" VarB="Outputs^Data19"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[19]" VarB="Outputs^Data20"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[1]" VarB="Outputs^Data2"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[20]" VarB="Outputs^Data21"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[21]" VarB="Outputs^Data22"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[22]" VarB="Outputs^Data23"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[23]" VarB="Outputs^Data24"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[24]" VarB="Outputs^Data25"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[25]" VarB="Outputs^Data26"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[26]" VarB="Outputs^Data27"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[27]" VarB="Outputs^Data28"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[28]" VarB="Outputs^Data29"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[29]" VarB="Outputs^Data30"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[2]" VarB="Outputs^Data3"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[30]" VarB="Outputs^Data31"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[31]" VarB="Outputs^Data32"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[32]" VarB="Outputs^Data33"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[33]" VarB="Outputs^Data34"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[34]" VarB="Outputs^Data35"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[35]" VarB="Outputs^Data36"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[36]" VarB="Outputs^Data37"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[37]" VarB="Outputs^Data38"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[38]" VarB="Outputs^Data39"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[39]" VarB="Outputs^Data40"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[3]" VarB="Outputs^Data4"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[40]" VarB="Outputs^Data41"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[41]" VarB="Outputs^Data42"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[42]" VarB="Outputs^Data43"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[43]" VarB="Outputs^Data44"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[44]" VarB="Outputs^Data45"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[45]" VarB="Outputs^Data46"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[46]" VarB="Outputs^Data47"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[47]" VarB="Outputs^Data48"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[48]" VarB="Outputs^Data49"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[49]" VarB="Outputs^Data50"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[4]" VarB="Outputs^Data5"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[50]" VarB="Outputs^Data51"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[51]" VarB="Outputs^Data52"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[52]" VarB="Outputs^Data53"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[53]" VarB="Outputs^Data54"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[54]" VarB="Outputs^Data55"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[55]" VarB="Outputs^Data56"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[56]" VarB="Outputs^Data57"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[57]" VarB="Outputs^Data58"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[58]" VarB="Outputs^Data59"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[59]" VarB="Outputs^Data60"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[5]" VarB="Outputs^Data6"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[60]" VarB="Outputs^Data61"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[61]" VarB="Outputs^Data62"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[62]" VarB="Outputs^Data63"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[63]" VarB="Outputs^Data64"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[6]" VarB="Outputs^Data7"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[7]" VarB="Outputs^Data8"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[8]" VarB="Outputs^Data9"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^D[9]" VarB="Outputs^Data10"/>
+				<Link VarA="PlcTask Outputs^BackgroundPcCOM.stOut_PcCom^SerCtrl" VarB="Outputs^Ctrl"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Robotino SPS^Term 1 (EK1200)^Analog Eingänge (4)">
 				<Link VarA="PlcTask Inputs^Shutdown.cell1" VarB="AI Standard Channel 2^Zelle1"/>
 				<Link VarA="PlcTask Inputs^Shutdown.cell12" VarB="AI Standard Channel 3^Zelle12"/>

@@ -51,6 +51,15 @@
     <Compile Include="POUs\Motormesswerte\Motormesswerte.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\RS232\BackgroundPcCOM.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\RS232\FB_SerialCom.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\RS232\RS232_Communication.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\Shutdown\Shutdown.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -69,6 +78,7 @@
     <Folder Include="POUs\Motormesswerte" />
     <Folder Include="POUs\Greiferansteuerung" />
     <Folder Include="POUs\Energieverbrauch" />
+    <Folder Include="POUs\RS232" />
     <Folder Include="POUs\Shutdown" />
     <Folder Include="POUs\UDP" />
     <Folder Include="VISUs" />
@@ -78,6 +88,10 @@
     <PlaceholderReference Include="Tc2_EtherCAT">
       <DefaultResolution>Tc2_EtherCAT, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_EtherCAT</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_SerialCom">
+      <DefaultResolution>Tc2_SerialCom, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_SerialCom</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
