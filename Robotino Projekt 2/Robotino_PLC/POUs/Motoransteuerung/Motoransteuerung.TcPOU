@@ -63,23 +63,8 @@ END_VAR]]></Declaration>
 //conversion from longitudinal, lateral & rotational velocity to the
 //three separate motor velocities
 
-// ACHTUNG Anpassung: Mindest-Geschwindigkeit = 170, wenn Signal zwischen 80 und 169
-
-//IF (vXCartesianToMotors < 170 AND vXCartesianToMotors > 5) THEN
-//	vX := 170;
-//ELSIF (vXCartesianToMotors > -170 AND vXCartesianToMotors < -5) THEN
-//	vX := -170;
-//ELSE
-	vX:=vXCartesianToMotors;
-//END_IF
-
-//IF vYCartesianToMotors < 170 AND vYCartesianToMotors > 5 THEN
-//	vY := 170;
-//ELSIF vYCartesianToMotors > -170 AND vYCartesianToMotors < -5 THEN
-//	vY := -170;
-//ELSE
-	vY:=vYCartesianToMotors;
-//END_IF
+vX:=vXCartesianToMotors;
+vY:=vYCartesianToMotors;
 vTheta:=vThetaCartesianToMotors;
 
 v1 := (-vX * COS(30.0*PI/180))	+ (vY * COS(60.0*PI/180))	+ (vTheta * 135.0);
@@ -92,7 +77,7 @@ velocityMotor2:=-v2;
 velocityMotor3:=-v3;
 
 //Geschwindigkeitsbegrenzung
-IF velocityMotor1 > velocityMax THEN
+IF (velocityMotor1 > velocityMax) OR (velocityMotor1 < -velocityMax) THEN
     velocityMotorsTf:= velocityMotor1;
     
     velocityMotor1:= velocityMax;
@@ -100,7 +85,7 @@ IF velocityMotor1 > velocityMax THEN
     velocityMotor3:= velocityMax * velocityMotor3 / velocityMotorsTf;
 END_IF
 
-IF velocityMotor2 > velocityMax THEN
+IF (velocityMotor2 > velocityMax) OR (velocityMotor2 < -velocityMax) THEN
     velocityMotorsTf:= velocityToMotor2;
     
     velocityMotor1:= velocityMax * velocityToMotor1 / velocityMotorsTf;
@@ -108,7 +93,7 @@ IF velocityMotor2 > velocityMax THEN
     velocityMotor3:= velocityMax * velocityToMotor3 / velocityMotorsTf;
 END_IF
 
-IF velocityMotor3 > velocityMax THEN
+IF (velocityMotor3 > velocityMax) OR (velocityMotor3 < -velocityMax) THEN
     velocityMotorsTf:= velocityToMotor3;
     
     velocityMotor1:= velocityMax * velocityMotor1 / velocityMotorsTf;
@@ -171,24 +156,9 @@ state:=nextState;]]></ST>
       <LineId Id="649" Count="2" />
       <LineId Id="653" Count="2" />
       <LineId Id="662" Count="1" />
-      <LineId Id="1306" Count="0" />
-      <LineId Id="1305" Count="0" />
-      <LineId Id="1309" Count="0" />
-      <LineId Id="1308" Count="0" />
-      <LineId Id="1310" Count="0" />
-      <LineId Id="1318" Count="0" />
-      <LineId Id="1320" Count="0" />
       <LineId Id="1312" Count="0" />
       <LineId Id="940" Count="0" />
-      <LineId Id="1313" Count="0" />
-      <LineId Id="1321" Count="0" />
-      <LineId Id="1315" Count="0" />
-      <LineId Id="1314" Count="0" />
-      <LineId Id="1322" Count="1" />
-      <LineId Id="1316" Count="0" />
-      <LineId Id="942" Count="0" />
-      <LineId Id="1317" Count="0" />
-      <LineId Id="943" Count="0" />
+      <LineId Id="942" Count="1" />
       <LineId Id="688" Count="4" />
       <LineId Id="1069" Count="0" />
       <LineId Id="893" Count="0" />
