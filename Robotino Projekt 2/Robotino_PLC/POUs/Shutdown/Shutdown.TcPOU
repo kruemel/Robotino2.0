@@ -22,7 +22,7 @@ spannungZelle2 :=(cell12-cell1)*umrechnungSpannung;
 
 // Rudimentäre Sicherung damit Akku nicht tiefentladen wird !!!
 IF(spannungZelle1<3.1 OR spannungZelle2 <3.1 OR shutdownButton = FALSE ) THEN
-	Shutdown_Block(DELAY:=3,START:=TRUE);
+	//Shutdown_Block(DELAY:=3,START:=TRUE);
 ELSE
 	Shutdown_Block(DELAY:=3,START:=FALSE);
 END_IF]]></ST>
