@@ -39,9 +39,6 @@
     <Compile Include="POUs\COE_Auswertung\SDOMotorErrorFlags.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Energieverbrauch\Energieverbrauch_ST.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\Greiferansteuerung\Greiferansteuerung.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -77,7 +74,6 @@
     <Folder Include="POUs\Motoransteuerung" />
     <Folder Include="POUs\Motormesswerte" />
     <Folder Include="POUs\Greiferansteuerung" />
-    <Folder Include="POUs\Energieverbrauch" />
     <Folder Include="POUs\RS232" />
     <Folder Include="POUs\Shutdown" />
     <Folder Include="POUs\UDP" />

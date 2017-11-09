@@ -12,6 +12,8 @@ VAR
 	bSendBusy	: BOOL;
 	eSendErrorID: ComError_t;
 
+	(* 	ReceiveString kann 80 Zeichen empfangen
+		Wenn mehr Platz gebraucht: -> ReceiveString255 *)
 	fbReceive		: ReceiveString;
 	sReceivedString	: STRING;
 	sLastReceivedString: STRING;
@@ -24,15 +26,15 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//EXAMPLE FOR COMMUNICATION VIA RS232
-
-// Call the send block every x seconds to repeat the transmission.
-// Also call the block as long as it is busy to finish a transmission.
+      <ST><![CDATA[(* fbSend wird alle x Sekunden aktiviert, um den Sendstring zu senden
+   fbSend wird auch aktiviert, wenn der String nach einem Zyklus noch nicht fertig gesendet wurde
+   (d.h. wenn Busy = True ist)
+*)
 Timer(IN:=TRUE);
 IF Timer.Q OR fbSend.Busy THEN
 	Timer(IN:=FALSE); (* reset timer *)
-	fbSend(			  (*Call the FB to send a message*)
-			SendString:= 'Hello World! Here I am! Go Robo!!!#', (*define a message*)
+	fbSend(
+			SendString:= 'Hello World! Here I am! Go Robo!!!#',  // Hier Nachricht definieren
 			TXbuffer:= TxBuffer,
 			Busy=> bSendBusy,
 			Error=> );
@@ -41,13 +43,15 @@ IF Timer.Q OR fbSend.Busy THEN
 	END_IF
 END_IF
 
-//	Receive string data:
-//	The block receives any data strings beginning with a STX ($02) and ending with an ETX ($03) character.	
-fbReceive(			(*Call the FB to send a message*)
-	Prefix:= '$02',	(*define start of message*)
-	Suffix:= '$03',	(*define end of message*)
+(* fbReceive empfängt Daten, die mit \02 anfangen und \03 aufhören
+	Prefix und Suffix können auch anders gewählt werden oder leer sein
+	(leer -> fbReceive empfängt dauerhaft)
+*)
+fbReceive(	
+	Prefix:= '$02',	// $02 == \02 ascii
+	Suffix:= '$03',	// $03 == \03 ascii
 	Timeout:= T#3S,
-	ReceivedString:= sReceivedString, (*recieved message*)
+	ReceivedString:= sReceivedString, // empfangene Nachricht
 	RXbuffer:= RxBuffer,
 	StringReceived=> bStringReceived,
 	Busy=> bReceiveBusy,
@@ -65,10 +69,16 @@ END_IF
 ]]></ST>
     </Implementation>
     <LineIds Name="FB_SerialCom">
-      <LineId Id="57" Count="1" />
-      <LineId Id="3" Count="4" />
+      <LineId Id="4" Count="0" />
+      <LineId Id="85" Count="1" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="5" Count="2" />
       <LineId Id="61" Count="0" />
-      <LineId Id="8" Count="22" />
+      <LineId Id="8" Count="8" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="89" Count="1" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="19" Count="11" />
       <LineId Id="59" Count="1" />
       <LineId Id="31" Count="4" />
       <LineId Id="2" Count="0" />

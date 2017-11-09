@@ -15,9 +15,7 @@ VAR
 	vX:		LREAL:=0;
 	vY:		LREAL:=0;
 	vTheta:	LREAL:=0;
-	v1:		LREAL:=0;
-	v2:		LREAL:=0;
-	v3:		LREAL:=0;
+
 	//Fahrrichtung Motor
 	velocityMotor1 :LREAL:=0;
 	velocityMotor2 :LREAL:=0;
@@ -48,35 +46,37 @@ VAR
 	
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Konverzierung ToMotors Anfang********************************************************
+      <ST><![CDATA[(****** Konverzierung ToMotors Anfang************
+Übersetzung der Koordinatentransformation aus dem Simulink Starterkit
 
-//	  conversion from positive and / or negative longitudinal, lateral and
-//	  rotational velocities(in milimeters per second) to three separate
-//	  positive motor velocities(resolution: 1Byte) and their rotation
-//    direction
-//inputs:  	velocityX  (longitudinal velocity in milimeters per second)
-//         	velocityY  (lateral velocity in milimeters per second)
-//			vtheta     (rotational velocity in milimeters per second)
-//outputs : velocityToMotor1	
-//			velocityToMotor2
-//			velocityToMotor3
-//conversion from longitudinal, lateral & rotational velocity to the
-//three separate motor velocities
+	  conversion from positive and / or negative longitudinal, lateral and
+	  rotational velocities(in milimeters per second) to three separate
+	  positive motor velocities(resolution: 1Byte) and their rotation direction
+inputs:  	vX  (longitudinal velocity in milimeters per second)
+         	vY  (lateral velocity in milimeters per second)
+			vTheta     (rotational velocity in milimeters per second)
+outputs : velocityToMotor1	
+			velocityToMotor2
+			velocityToMotor3
+conversion from longitudinal, lateral & rotational velocity to the
+three separate motor velocities
+*)
 
-vX:=vXCartesianToMotors;
-vY:=vYCartesianToMotors;
-vTheta:=vThetaCartesianToMotors;
+// Drehrichtung umgekehrt als die Richtung im alten Robotino
+vX:=-vXCartesianToMotors;
+vY:=-vYCartesianToMotors;
+vTheta:=-vThetaCartesianToMotors;
 
-v1 := (-vX * COS(30.0*PI/180))	+ (vY * COS(60.0*PI/180))	+ (vTheta * 135.0);
-v2 := 0.0						+ (-vY)						+ (vTheta * 135.0);
-v3 := (vX * COS(30.0*PI/180))	+ (vY * COS(60.0*PI/180))	+ (vTheta * 135.0);
-	
-//Drehrichtung Umkehren
-velocityMotor1:=-v1;
-velocityMotor2:=-v2;
-velocityMotor3:=-v3;
+velocityMotor1 := (-vX * COS(30.0*PI/180))	+ (vY * COS(60.0*PI/180))	+ (vTheta * 135.0);
+velocityMotor2 := 0.0						+ (-vY)						+ (vTheta * 135.0);
+velocityMotor3 := (vX * COS(30.0*PI/180))	+ (vY * COS(60.0*PI/180))	+ (vTheta * 135.0);
 
-//Geschwindigkeitsbegrenzung
+(* 	Geschwindigkeitsbegrenzung:
+	Der Simulink Regler hat keine Output Begrenzung!
+	Wenn Geschwindigkeit > v_max, dann muss v skaliert werden -> andere Motorgeschwindigkeiten müssen 
+	dann entsprechend mitskaliert werden
+	velocityMotorsTf: Faktor, der alle Geschwindigkeit auf v_max runterskaliert
+*)
 IF (velocityMotor1 > velocityMax) OR (velocityMotor1 < -velocityMax) THEN
     velocityMotorsTf:= velocityMotor1;
     
@@ -100,11 +100,10 @@ IF (velocityMotor3 > velocityMax) OR (velocityMotor3 < -velocityMax) THEN
     velocityMotor2:= velocityMax * velocityMotor2 / velocityMotorsTf;
     velocityMotor3:= velocityMax;
 END_IF
-// Konverzierung ToMotors ENDE********************************************************
+// Konvertierung ToMotors ENDE********************************************************
 
 
 //MOTORANSTEUERUNG Zustandsautomat
-
 CASE state OF
 	EnumState.init:						
 						IF bumper=TRUE THEN
@@ -152,19 +151,23 @@ state:=nextState;]]></ST>
     </Implementation>
     <LineIds Name="Motoransteuerung">
       <LineId Id="724" Count="0" />
-      <LineId Id="643" Count="4" />
+      <LineId Id="1359" Count="0" />
+      <LineId Id="643" Count="3" />
       <LineId Id="649" Count="2" />
       <LineId Id="653" Count="2" />
       <LineId Id="662" Count="1" />
+      <LineId Id="1358" Count="0" />
+      <LineId Id="1360" Count="0" />
       <LineId Id="1312" Count="0" />
       <LineId Id="940" Count="0" />
       <LineId Id="942" Count="1" />
-      <LineId Id="688" Count="4" />
-      <LineId Id="1069" Count="0" />
-      <LineId Id="893" Count="0" />
-      <LineId Id="1067" Count="1" />
+      <LineId Id="688" Count="3" />
       <LineId Id="1135" Count="0" />
-      <LineId Id="897" Count="7" />
+      <LineId Id="897" Count="0" />
+      <LineId Id="1363" Count="0" />
+      <LineId Id="1366" Count="2" />
+      <LineId Id="1361" Count="0" />
+      <LineId Id="898" Count="6" />
       <LineId Id="924" Count="6" />
       <LineId Id="905" Count="0" />
       <LineId Id="932" Count="6" />
@@ -173,7 +176,6 @@ state:=nextState;]]></ST>
       <LineId Id="1107" Count="0" />
       <LineId Id="756" Count="0" />
       <LineId Id="362" Count="0" />
-      <LineId Id="1183" Count="0" />
       <LineId Id="1182" Count="0" />
       <LineId Id="1184" Count="0" />
       <LineId Id="1193" Count="1" />

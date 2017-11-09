@@ -20,9 +20,6 @@
       <Name>Motoransteuerung</Name>
     </PouCall>
     <PouCall>
-      <Name>Energieverbrauch_ST</Name>
-    </PouCall>
-    <PouCall>
       <Name>Shutdown</Name>
     </PouCall>
     <PouCall>

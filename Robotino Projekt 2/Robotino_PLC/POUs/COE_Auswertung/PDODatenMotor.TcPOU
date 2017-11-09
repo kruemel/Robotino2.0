@@ -15,10 +15,14 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[(*	Strom und Spannung des Motors werden direkt per PDO-Mapping als Outputs gemappt
+	Hier: nur Input Variablen definiert, um die Daten im Scope Server anzeigen zu lassen
+*)]]></ST>
     </Implementation>
     <LineIds Name="PDODatenMotor">
       <LineId Id="5" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="18" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

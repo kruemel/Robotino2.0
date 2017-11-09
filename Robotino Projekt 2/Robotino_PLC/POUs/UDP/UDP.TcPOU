@@ -7,29 +7,26 @@ VAR_INPUT
 	x	  AT%Q*	: ARRAY[1..4] OF LREAL;
 	y	  AT%Q*	: ARRAY[1..4] OF LREAL;
 	theta AT%Q*	: ARRAY[1..4] OF LREAL;
-	
-	xOld	  AT%Q*	: ARRAY[1..4] OF LREAL;
-	yOld	  AT%Q*	: ARRAY[1..4] OF LREAL;
-	thetaOld  AT%Q*	: ARRAY[1..4] OF LREAL;
 END_VAR
 
 VAR
-	//sPaketinhalt	: LREAL;
-	//nPaketlaenge	: UDINT;
 	udp1 : UDPConnect;
-	
 	count :INT :=0;
-	
-	
-	//Offests für aufkgeklebtes Label Robotino 2.0
-	xOffset:LREAL:=-102.323;
-	yOffset:LREAL:=-17.81;
-	thetaOffset:LREAL:=PI/2;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[udp1();]]></ST>
+      <ST><![CDATA[(*** UDP Kommunikation ***
+	Hier wird nur der FB UDPConnect instanziert
+	Für x,y,theta reichen eigentlich 8 Byte Variablen. Hier: LREAL wegen Kompatibilität
+		zu Simulink Regler, der double (=LREAL) als Input braucht
+*)
+
+udp1();]]></ST>
     </Implementation>
     <LineIds Name="UDP">
+      <LineId Id="27" Count="0" />
+      <LineId Id="30" Count="2" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="28" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

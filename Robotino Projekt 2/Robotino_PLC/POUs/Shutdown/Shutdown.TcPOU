@@ -8,7 +8,7 @@ VAR
 	cell1  			AT%I*   :INT:=0;
 	cell12 			AT%I*	:INT:=0;
 	
-	umrechnungSpannung:LREAL:=0.000305185094;
+	umrechnungSpannung:LREAL:=0.000305185094; 	// 
 	spannungZelle1:LREAL:=0;
 	spannungZelle2:LREAL:=0;
 	

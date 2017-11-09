@@ -21,7 +21,9 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF ipUdp <> 0 THEN
+      <ST><![CDATA[// CheckReceived() ruft ReceiveData auf
+
+IF ipUdp <> 0 THEN
     ipUdp.CheckReceived();
 END_IF
 
@@ -34,7 +36,9 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[IF (NOT bInCopyCode AND ipUdp <> 0) THEN //Shutdown
+        <ST><![CDATA[// Destruktor für UDPConnect
+
+IF (NOT bInCopyCode AND ipUdp <> 0) THEN //Shutdown
      ipUdp.UnregisterReceiver(updPort);
     FW_SafeRelease(ADR(ipUdp));
      FB_exit := TRUE;
@@ -55,7 +59,9 @@ VAR
     hr : HRESULT;
 END_VAR]]></Declaration>
       <Implementation>
-        <ST><![CDATA[IF NOT bInCopyCode THEN // no online change
+        <ST><![CDATA[// Konstruktor für UDPConnect
+
+IF NOT bInCopyCode THEN // no online change
     IF ipUdp = 0 THEN
      hrInit := FW_ObjMgr_GetObjectInstance(   oid:=oid, 
     
@@ -96,7 +102,7 @@ VAR_INPUT
 	udpDestPort	: UINT;
 	udpSrcPort	: UINT;
 	nData	: UDINT;
-	pData	: PVOID;
+	pData	: PVOID;	// Pointer auf Datenbereich des UDP-Pakets
 	pVlan	: POINTER TO ETYPE_VLAN_HEADER := 0;
 END_VAR
 
@@ -105,13 +111,23 @@ VAR
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[nReceivedPakets := nReceivedPakets+1;
-//MAIN_UDP.nPaketlaenge := nData;
+        <ST><![CDATA[nReceivedPakets := nReceivedPakets+1; 	// zählt Pakete
 
+(*** Auslesen des Datenbereichs von UDP-Paketen ***
+	* UDP-Telegramm besteht aus 56*8 = 448 Bytes (siehe UDP-Doku Lokalisierungsrechner)
+	  Pro Robotino: 3*8 = 24 Bytes: je 8 Bytes für x-Koord, y-Koord, theta in rad
+	  Robotino1: Bytes 1-8   -> x-Koord, Bytes 9-16  -> y-Koord, Bytes 17-24 -> theta
+	  Robotino2: Bytes 25-32 -> x-Koord, Bytes 33-40 -> y-Koord, Bytes 41-48 -> theta  usw.. 
+	* pData zeigt auf Adressbereich, in dem die 448 Byte großen UDP-Daten liegen
+	  in der Schleife werden jeweils 8 Byte in den UDP-Array geschrieben und der Pointer nach
+	  jedem Schritt um 8 Byte weiter geschoben
+*)
+
+// 4 Schleifendurchgänge für 4 Robotinos, i=0 -> Robo1 i=1 -> Robo2 usw..
 FOR i := 0 TO 3 DO
-	memcpy(ADR(UDP.x[i+1]),pData+((i*3)*8),8);
-	memcpy(ADR(UDP.y[i+1]),pData+((i*3+1)*8),8);
-	memcpy(ADR(UDP.theta[i+1]),pData+((i*3+2)*8),8);
+	memcpy(ADR(UDP.x[i+1]),pData+((i*3)*8),8);			// x-Koord
+	memcpy(ADR(UDP.y[i+1]),pData+((i*3+1)*8),8);		// y-Koord
+	memcpy(ADR(UDP.theta[i+1]),pData+((i*3+2)*8),8);	// theta
 END_FOR;]]></ST>
       </Implementation>
     </Method>
@@ -153,16 +169,19 @@ METHOD TcRelease : UDINT
       </Implementation>
     </Method>
     <LineIds Name="UDPConnect">
+      <LineId Id="56" Count="1" />
       <LineId Id="17" Count="1" />
       <LineId Id="9" Count="0" />
       <LineId Id="37" Count="0" />
       <LineId Id="35" Count="0" />
     </LineIds>
     <LineIds Name="UDPConnect.FB_exit">
+      <LineId Id="17" Count="1" />
       <LineId Id="7" Count="5" />
       <LineId Id="6" Count="0" />
     </LineIds>
     <LineIds Name="UDPConnect.FB_init">
+      <LineId Id="36" Count="1" />
       <LineId Id="12" Count="7" />
       <LineId Id="21" Count="5" />
       <LineId Id="7" Count="0" />
@@ -175,6 +194,11 @@ METHOD TcRelease : UDINT
       <LineId Id="29" Count="0" />
       <LineId Id="56" Count="0" />
       <LineId Id="103" Count="0" />
+      <LineId Id="126" Count="3" />
+      <LineId Id="132" Count="2" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="131" Count="0" />
+      <LineId Id="130" Count="0" />
       <LineId Id="79" Count="0" />
       <LineId Id="77" Count="0" />
       <LineId Id="80" Count="1" />

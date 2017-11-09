@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
   <POU Name="SDODatenMotor" Id="{38769b05-daee-4b94-978b-eba83957c752}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM SDODatenMotor
 VAR
@@ -17,7 +17,14 @@ VAR
 	
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[(*** Daten azyklisch aus Klemme auslesen per SDO
+	getSDO* liest CoE-Daten aus der Klemme aus:
+		- getSDODatenMotor: Alle Daten, die in Objekt 9020 bzw. 9030 der Motorklemme liegen (siehe Reiter CoE-Daten auf Klemme)
+			- Strom/Spannung werden alle 0.4 ms ausgelesen, Rest alle 1 ms
+		- getSDODatenMotorklemme: evtl. interessante Klemmendaten, Abruf alle 5 ms
+		- getSDOMotorErrorFlags: Fehlerflags wie Kurzschluss, zu hohe Temp, Überlast usw., Abruf alle 5 ms
+*)
+
 DatenMotor1.nSlaveAddr := 1001;		// Klemme  1
 DatenMotor1.nIndex := 16#9020;		// Channel 1
 DatenMotor1();
@@ -41,6 +48,10 @@ SpannungMotor2 :=DatenMotor2.Spannung;
 SpannungMotor3 :=DatenMotor3.Spannung;]]></ST>
     </Implementation>
     <LineIds Name="SDODatenMotor">
+      <LineId Id="88" Count="0" />
+      <LineId Id="90" Count="3" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="89" Count="0" />
       <LineId Id="31" Count="0" />
       <LineId Id="14" Count="0" />
       <LineId Id="40" Count="0" />

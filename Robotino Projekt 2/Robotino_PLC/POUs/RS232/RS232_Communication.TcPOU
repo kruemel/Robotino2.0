@@ -11,15 +11,18 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* background communication with the PC COM port device *)
+      <ST><![CDATA[(*** RS232 Kommunikationsbeispiel ***
+	BackhgroundPcCOM: Hintergrundprogramm, das zyklisch mit COM-Schnittstelle des IPC kommuniziert
+	fbPcCom: FB zum Senden und Empfangen von Daten
+*)
 BackgroundPcCOM(RxBufferPcCom:=RxBufferPcCom, TxBufferPcCom:=TxBufferPcCom);
-
-(* Send and receive commands *)
 fbPcCom(TxBuffer:=TxBufferPcCom, RxBuffer:=RxBufferPcCom);]]></ST>
     </Implementation>
     <LineIds Name="RS232_Communication">
-      <LineId Id="4" Count="1" />
-      <LineId Id="7" Count="1" />
+      <LineId Id="4" Count="0" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="5" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
